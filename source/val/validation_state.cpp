@@ -1489,6 +1489,7 @@ bool ValidationState_t::ContainsType(
     case spv::Op::OpTypeImage:
     case spv::Op::OpTypeSampledImage:
     case spv::Op::OpTypeCooperativeMatrixNV:
+    case spv::Op::OpTypeJointMatrixINTEL:
       return ContainsType(inst->GetOperandAs<uint32_t>(1u), f,
                           traverse_all_types);
     case spv::Op::OpTypePointer:

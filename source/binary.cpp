@@ -457,9 +457,9 @@ spv_result_t Parser::parseOperand(size_t inst_offset,
       inst->result_id = word;
       // Save the result ID to type ID mapping.
       // In the grammar, type ID always appears before result ID.
-      if (_.id_to_type_id.find(inst->result_id) != _.id_to_type_id.end())
-        return diagnostic(SPV_ERROR_INVALID_ID)
-               << "Id " << inst->result_id << " is defined more than once";
+//      if (_.id_to_type_id.find(inst->result_id) != _.id_to_type_id.end())
+//        return diagnostic(SPV_ERROR_INVALID_ID)
+//               << "Id " << inst->result_id << " is defined more than once";
       // Record it.
       // A regular value maps to its type.  Some instructions (e.g. OpLabel)
       // have no type Id, and will map to 0.  The result Id for a
